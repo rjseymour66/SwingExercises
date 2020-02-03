@@ -8,5 +8,5 @@ addWindowListener(new WindowDestroyer()); within a constructor of the GUI class 
 of WindowDestroyer given in Listing 13.2.
 - You can group components together by placing the components in an object of JPanel—a panel—and then adding the panel to the GUI.
 - The GUI—that is, the JFrame window—and each panel in the GUI should be given a layout manager, using the method setLayout.
-- If any of the components, such as a button, generate action events, you need to make the GUI (or some other class) an action listener. Every element that generates an action event should have an action listener registered with it. You register an action listener by using the method addActionListener.
-- To make a class an action listener, you need to write implements ActionListener at the end of the heading of the class definition. You also need to define the method actionPerformed in the class.
+- If any of the components, such as a button, generate action events, you need to make the GUI (or some other class) an action listener. Every element that generates an action event should have an action listener registered with it. You register an action listener by using the method `addActionListener`.
+- To make a class an action listener, you need to write implements `ActionListener` at the end of the heading of the class definition. You also need to define the method `actionPerformed` in the class.
