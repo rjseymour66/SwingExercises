@@ -10,8 +10,8 @@ import java.awt.image.BufferedImage;
 
 public class ChangePassword extends JFrame implements ActionListener {
 
-    public static final int WIDTH = 500;
-    public static final int HEIGHT = 300;
+    public static final int WIDTH = 400;
+    public static final int HEIGHT = 200;
 
     private JTextField oPWord;
     private JTextField nPWord;
@@ -29,18 +29,18 @@ public class ChangePassword extends JFrame implements ActionListener {
         // textPanel
         var textPanel = new JPanel();
         textPanel.setBackground(Color.GRAY);
-        textPanel.setLayout(new FlowLayout());
+        textPanel.setLayout(new GridLayout(2, 1));
 
         // add text fields
-        oPWord = new JTextField("Old Password", 20);
+        oPWord = new JTextField("Old Password", 10);
         textPanel.add(oPWord);
 
-        nPWord = new JTextField("New Password", 20);
+        nPWord = new JTextField("New Password", 10);
         textPanel.add(nPWord);
 
         // button panel
         var buttonPanel = new JPanel();
-        buttonPanel.setBackground(Color.RED);
+        buttonPanel.setBackground(Color.LIGHT_GRAY);
         buttonPanel.setLayout(new FlowLayout());
 
         // add button
@@ -48,20 +48,20 @@ public class ChangePassword extends JFrame implements ActionListener {
         changeButton.addActionListener(this);
         buttonPanel.add(changeButton);
 
-/*
+
         // results panel
         var resultsPanel = new JPanel();
-        resultsPanel.setBackground(Color.BLUE);
-*/
+        resultsPanel.setBackground(Color.LIGHT_GRAY);
+
         // results label
         rLabel = new JLabel("");
-        buttonPanel.add(rLabel);
+        resultsPanel.add(rLabel);
 
 
 
         // add to content pane
-        contentPane.add(textPanel, BorderLayout.CENTER);
-        //contentPane.add(resultsPanel, BorderLayout.CENTER);
+        contentPane.add(textPanel, BorderLayout.NORTH);
+        contentPane.add(resultsPanel, BorderLayout.CENTER);
         contentPane.add(buttonPanel, BorderLayout.SOUTH);
 
         // closeable
